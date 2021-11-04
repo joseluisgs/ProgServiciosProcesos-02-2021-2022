@@ -18,8 +18,8 @@ public class HiloExt extends Thread{
         this.setName(name);
         while(ca.getPosicion()<100){
             avance=ca.avanzar();
-            System.out.println("El "+name+" ha avanzado "+avance+" posiciones y esta en la posición "+ca.getPosicion());
             ca.setPosicion(ca.getPosicion()+avance);
+            System.out.println("El "+name+" ha avanzado "+avance+" posiciones y esta en la posición "+ca.getPosicion());
             try {
                 Thread.sleep((long) (Math.random()*100));
             } catch (InterruptedException e) {
